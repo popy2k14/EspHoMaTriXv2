@@ -291,9 +291,6 @@ EHMTX_SCHEMA = cv.Schema({
             cv.GenerateID(CONF_TRIGGER_ID): cv.declare_id(NightModeTrigger),
         }
     ),
-    cv.Optional(CONF_NIGHT_MODE_SCREENS, default=DEFAULT_NIGHT_MODE_SCREENS): cv.All(
-            cv.ensure_list(cv.one_of(1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26)), cv.Length(min=1, max=5)
-        ),
     cv.Optional(CONF_ICON_INDICATOR_SCREENS, default=DEFAULT_ICON_INDICATOR_SCREENS): cv.All(
             cv.ensure_list(cv.one_of(1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26)), cv.Length(min=1, max=5)
         ),
